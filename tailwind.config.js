@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        heroPattern: 'url("../assets/bg-hero.svg")'
+      },
       fontFamily: {
         poppins:'var(--font-poppins)',
         inter:'var(--font-inter)',
@@ -23,8 +26,10 @@ module.exports = {
         gray200:'#c6c5ce',
         gray100:'#f1f0f5',
 
-      }
+      },
+        
     },
+    
   },
   plugins: [],
 }
