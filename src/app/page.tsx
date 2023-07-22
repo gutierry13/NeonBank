@@ -9,7 +9,7 @@ import cardCircle from '../assets/circle-cards-neon.svg'
 export default function Home() {
   return (
     <div className=''>
-      <header className="w-full absolute top-0 left-0 h-[88px] flex border-b-2 border-[rgba(255,255,255,0.2)]">
+      <header className="w-full absolute top-0 left-0 h-[88px] flex border-solid border-b-2 border-[rgba(255,255,255,0.2)]">
         <div className="w-full max-w-[1245px] px-4 mx-auto flex justify-between items-center ">
           <a href="/">
             <Image
@@ -66,8 +66,8 @@ export default function Home() {
           </nav>
         </div>
       </header>
-      <section className="w-full h-[786px] bg-heroPattern pt-44">
-        <div className="w-full max-w-[1245px] mx-auto px-4">
+      <section className="w-full h-[786px] bg-heroPattern pt-44 overflow-hidden">
+        <div className="w-full max-w-[1245px] mx-auto px-4 flex items-start justify-between  ">
           <div className='w-full max-w-[684px]'>
             <h3 className="font-poppins text-2xl leading-6 text-white opacity-80 font-semibold mb-8">Abra sua conta, é so baixar o app!</h3>
             <h1 className="font-poppins font-semibold text-6xl leading-[112%] text-white mb-9">A conta digital certa pra cuidar bem do seu dinheiro</h1>
@@ -76,21 +76,24 @@ export default function Home() {
             </button>
             <ul className='flex items-center justify-between mt-16  w-full max-w-[621px]'>
             <li className='flex items-center'>
-              <div className='w-12 rounded-full flex items-center justify-center h-12 bg-gradient-to-b from-[rgba(53,202,226,0.2)] from-0%  to-[rgba(53,202,226,0)] to-100%'><Image src={iconAnuidade} alt="Icone anuidade "  /></div> <span>Cartão sem anuidade</span>
+              <div className='w-12 rounded-full flex items-center justify-center h-12 bg-gradient-to-b from-[rgba(53,202,226,0.2)] from-0%  to-[rgba(53,202,226,0)] to-100%'><Image src={iconAnuidade} alt="Icone anuidade "  /></div> <span className='text-lg text-white w-36 ml-3' >Cartão sem anuidade</span>
             </li>
             <li className='flex items-center'>
-          <div  className='w-12 rounded-full flex items-center justify-center h-12 bg-gradient-to-b from-[rgba(53,202,226,0.2)] from-0%  to-[rgba(53,202,226,0)] to-100%'><Image src={iconConta} alt="Icone conta digital" /></div> <span>Conta digital 100% grátis</span>
+          <div  className='w-12 rounded-full flex items-center justify-center h-12 bg-gradient-to-b from-[rgba(53,202,226,0.2)] from-0%  to-[rgba(53,202,226,0)] to-100%'><Image src={iconConta} alt="Icone conta digital" /></div> <span className='text-lg text-white w-36 ml-3' >Conta digital 100% grátis</span>
             </li>
             <li className='flex items-center'>
-          <div className='w-12 rounded-full flex items-center justify-center h-12 bg-gradient-to-b from-[rgba(53,202,226,0.2)] from-0%  to-[rgba(53,202,226,0)] to-100%'><Image src={iconDinheiro} alt="Icone dinheiro" /></div> <span>Seu dinheiro rendendo mais</span>
+          <div className='w-12 rounded-full flex items-center justify-center h-12 bg-gradient-to-b from-[rgba(53,202,226,0.2)] from-0%  to-[rgba(53,202,226,0)] to-100%'><Image src={iconDinheiro} alt="Icone dinheiro" /></div> <span className='text-lg text-white w-36 ml-3' >Seu dinheiro rendendo mais</span>
             </li>
           </ul>
           </div>
-          <div>
-            <h2>Banco 100% digital</h2>
-            <Image src={cardNeon} alt="" />
-            <Image src={cardNeonBack} alt="" />
-            <Image src={cardCircle} alt="" />
+          {/*Area img */}
+          <div className='w-full max-w-[706px] mr-[-179px] relative'>
+          <h2 className="font-poppins font-semibold text-4xl leading-5 text-white opacity-40 mb-16 text-center">Banco 100% digital</h2>
+        <div className='w-full h-[541px] relative top-8 '>
+            <Image src={cardNeon} alt="" className='absolute left-0 top-10 z-50'/>
+              <Image src={cardNeonBack} alt=""className='absolute bottom-11 right-[86px]  z-10'/>
+              <Image src={cardCircle} alt="" className='absolute top-7 right-12'/>
+            </div>
           </div>
         </div>
       </section>
